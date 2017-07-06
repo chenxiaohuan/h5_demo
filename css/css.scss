@@ -1,0 +1,266 @@
+*{
+	padding:0;
+	border:0;
+	margin:0;
+	list-style-type:none;
+}
+html{
+	font-size:62.5%;	
+}
+body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background: #fffef2;
+	font-family:'微软雅黑';
+	img{
+		max-width:100%;
+	}
+}
+@mixin height($height,$allHeight){		//计算高度
+	height:($height/$allHeight)*100;
+}
+@mixin width($width,$allWidth){			//计算宽度
+	width:($width/$allWidth)*100;
+}
+@mixin origin($width,$allWidth,$height,$allHeight){			//计算宽度
+	transform-origin:($width/$allWidth)*100 ($height/$allHeight)*100;;
+}
+@mixin marginLeft($width,$allWidth){		//居中div
+	margin-left:($width/$allWidth)*100/-2;
+}
+@mixin background($imgName,$size:'100% 100%'){		//背景设置
+	$imgURL:'../images';
+	background:url(#{$imgURL}/#{$imgName}) no-repeat;
+	background-size:#{$size};
+}
+@mixin position($pos,$lr:left,$val1:0,$tb:top,$val2:0){		//定位设置
+	position : $pos;
+	#{$lr} : $val1;
+	#{$tb} : $val2;
+}
+@mixin animate2d($animate,$property,$valStart,$valEnd){		//动画
+	@keyframes #{$animate}{
+		0%{#{$property}:#{$valStart};}
+		100%{#{$property}:#{$valEnd};}
+	}
+	@-ms-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart};}
+		100%{#{$property}:#{$valEnd};}
+	}
+	@-moz-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart};}
+		100%{#{$property}:#{$valEnd};}
+	}
+	@-webkit-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart};}
+		100%{#{$property}:#{$valEnd};}
+	}
+	@-o-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart};}
+		100%{#{$property}:#{$valEnd};}
+	}	
+}
+
+@mixin animate3d($animate,$property,$property2,$valStart,$valEnd,$valStart2,$valEnd2){		//动画
+	@keyframes #{$animate}{
+		0%{#{$property}:#{$valStart}; #{$property2}:#{$valStart2}}
+		100%{#{$property}:#{$valEnd}; #{$property2}:#{$valEnd2};}
+	}
+	@-ms-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart}; #{$property2}:#{$valStart2}}
+		100%{#{$property}:#{$valEnd}; #{$property2}:#{$valEnd2}}
+	}
+	@-moz-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart}; #{$property2}:#{$valStart2}}
+		100%{#{$property}:#{$valEnd}; #{$property2}:#{$valEnd2}}
+	}
+	@-webkit-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart}; #{$property2}:#{$valStart2}}
+		100%{#{$property}:#{$valEnd}; #{$property2}:#{$valEnd2}}
+	}
+	@-o-keyframes #{$animate}{
+		0%{#{$property}:#{$valStart}; #{$property2}:#{$valStart2}}
+		100%{#{$property}:#{$valEnd}; #{$property2}:#{$valEnd2}}
+	}	
+}
+
+@include animate2d(music,transform,rotate(0deg),rotate(360deg));
+@include animate2d(translateY,bottom,4.5%,2.5%);
+@include animate3d(circle,transform,opacity,scale(1),scale(1.2),1,0);
+@include animate2d(move,top,-1%,0);
+@include animate2d(show,display,none,block);
+
+@mixin playAnimation($animateName,$s:2s,$speed:linear,$iteration:infinite,$direction:normal,$mode:forwards){
+	animation:$animateName $s $speed $iteration $direction $mode;  
+	-ms-animation:$animateName $s $speed $iteration $direction $mode;
+	-moz-animation:$animateName $s $speed $iteration $direction $mode;
+	-webkit-animation:$animateName $s $speed $iteration $direction $mode;
+	-o-animation:$animateName $s $speed $iteration $direction $mode;
+}
+
+body{
+	.commonBox{
+		width: 100%; 
+		height: 100%;
+	}
+	.mask{
+		@extend .commonBox;
+		background:#000;
+		opacity:0.8;
+		filter:alpha(opacity=70);
+		@include position(fixed);
+		z-index:20;
+		display:none;
+	}
+
+    .swiper-wrapper {
+	    -webkit-perspective: 1200px;
+	    -moz-perspective: 1200px;
+	    -ms-perspective: 1200px;
+	    perspective: 1200px;
+    }
+    .swiper-slide {
+	    position: relative;
+	    -webkit-transform-style: preserve-3d;
+	    -moz-transform-style: preserve-3d;
+	    -ms-transform-style: preserve-3d;
+	    transform-style: preserve-3d;
+	    background-size:100% auto;
+	    overflow:hidden;
+	    text-align:center;
+    }
+	.swiper-slide img{
+		max-width:100%;
+	}
+	.img-animate{
+		width: 100%;
+		height: 100%;
+		position:absolute;
+		top: 0;
+		left: 0;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.page1{
+		$bg : '1/P_one_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page2{
+		$bg : '2/P_two_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page3{
+		$bg : '3/P_three_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page4{
+		$bg : '4/P_four_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page5{
+		$bg : '5/P_five_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page6{
+		$bg : '6/P_six_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page7{
+		$bg : '7/P_seven_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page8{
+		$bg : '8/P_eight_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page9{
+		$bg : '9/P_nine_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page10{
+		$bg : '10/P_ten_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+	.page11{
+		$bg : '11/P_eleven_00000.jpg';
+		@include background($bg);
+		@include position(relative);
+	}
+
+}
+
+.music{
+	@include width(56%,750);
+	@include height(56%,1217);
+	$bg : 'music.png';
+	@include background($bg);
+	@include position(absolute,right,2%,top,1%);
+	z-index:10;
+	@include playAnimation(music);
+}
+#audio{
+	@include position(absolute,left,0%,top,0%);
+	z-index:1;
+	opacity:0;
+}
+.progress{
+	width:100%;
+	height:100%;
+	background:#091a4d;
+	@include position(absolute,left,0%,top,0%);
+	z-index:100;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	display:none;
+	.progressScroll{
+		width:80%;
+		height:30px;
+		background:#fff;
+		border-radius:16px;
+		overflow:hidden;
+		@include position(relative);
+		.scroll{
+			width:0%;
+			height:30px;
+			background:#ffe21c;
+		}
+		.font{
+			width:100%;
+			height:30px;
+			@include position(absolute,left,0%,top,0%);
+			z-index:10;
+			text-align:center;
+			line-height:30px;
+			font-size:1.6rem;
+			font-weight:bolder;
+		}
+	}
+}
+
+@mixin media($width,$font){
+	@media screen and (min-width:$width){
+		html{
+			font-size:#{$font};
+		}
+	}	
+}
+@include media(320px,53.25%);
+@include media(360px,59.25%);
+@include media(375px,62.5%);
+@include media(600px,100.5%);

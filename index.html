@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>中大四年心情 全浓缩在这些页面里</title> 
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="keywords" content="关键字" />
+	<meta name="description" content="描述内容" />
+
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.animate.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script>  
+  /* 
+   * 注意： 
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。 
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。 
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html 
+   * 
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈： 
+   * 邮箱地址：weixin-open@qq.com 
+   * 邮件主题：【微信JS-SDK反馈】具体问题 
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。 
+   */  
+  wx.config({  
+        debug: false,  
+        appId: 'wxccb98eef1948a93f',
+        timestamp: '1498406376',  
+        nonceStr: 'XSQzBCzNQfnAEvBk',  
+        signature: '1b8b8b2996ec24abfd2375a686af0fbc6c89bd6a',  
+        jsApiList: [  
+            // 所有要调用的 API 都要加到这个列表中  
+            'checkJsApi',  
+            'onMenuShareTimeline',  
+            'onMenuShareAppMessage',  
+            'onMenuShareQQ',  
+            'onMenuShareWeibo',  
+            'onMenuShareQZone',  
+        ]  
+    });  
+  
+    wx.ready(function () {  
+        // 在这里调用 API  
+        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口  
+        wx.onMenuShareTimeline({  
+            title: '中大四年心情 全浓缩在这些画里', // 分享标题  
+            desc: '戳中泪点！点击转发你的毕业季专属明信片，分享你的心声', // 分享描述  
+            link: 'http://www.xxx.com', // 分享链接
+            imgUrl: 'http://www.xxx.com/images/11111.jpg', // 分享图标
+            success: function () {  
+                // 用户确认分享后执行的回调函数  
+            },  
+            cancel: function () {  
+                // 用户取消分享后执行的回调函数  
+            }  
+        });  
+        //获取“分享给朋友”按钮点击状态及自定义分享内容接口  
+        wx.onMenuShareAppMessage({  
+            title: '中大四年心情 全浓缩在这些画里', // 分享标题  
+            desc: '戳中泪点！点击转发你的毕业季专属明信片，分享你的心声', // 分享描述  
+            link: 'http://www.xxx.com', // 分享链接
+            imgUrl: 'http://www.xxx.com/images/11111.jpg', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link  
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空  
+        });  
+ 
+    });  
+</script>
+</head>
+<body>
+<div>
+	<div class="wrap">
+		<div class="load">
+			<div class="spinner">
+			  <div class="spinner-container container1">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+			  </div>
+			  <div class="spinner-container container2">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+			  </div>
+			  <div class="spinner-container container3">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+			  </div>
+			</div>
+			<p>页面加载中</p>
+		</div>
+    	<div class="mask"></div>
+        <div class="share"><img src="images/weixin.png"/></div>
+        <audio src="music/music_bg.mp3"  controls="controls"  loop="loop" id ="audio" autoplay="autoplay" style="position:absolute; top:-30%; opacity:0;  z-index:99">
+        </audio>
+
+         <audio src="music/music_bg.mp3"  controls="controls" id ="audiotwo" style="position:absolute; top:-30%; opacity:0;  z-index:99">
+        </audio>       
+		<div class="music"><img src="images/music.png" alt=""></div>
+		<div class="music-stop"><img src="images/music.png" alt=""></div>
+		<div class="swiper-container">
+	  		<div class="swiper-wrapper">        
+            
+				<!--<section class="swiper-slide" style="background:#fffef2 url(images/B_one_00001.jpg) no-repeat; background-size: 100% 100%;">-->
+				<section class="swiper-slide">
+				  <div class="swiper-slide pagetop">
+				  	<div class="zhezhao"></div>
+				  	<div class="textbox">
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.2s">毕业, 就像一个大大的句号</p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1s">从此, 我们告别一段彩色青春 </p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.8s">一段年少轻狂的岁月</p>
+					<p style="margin-bottom:20%" class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="2.5s">一个充满幻想的时代</p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="3.3s">流水般的时光，流水般的记忆。</p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="4.1s">一切来的匆匆，去的也匆匆，</p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="4.9s">我们在这里存在过</p>
+					<p class="ani resize" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="5.7s">然后又从这里消失...........</p>
+					<div class="scroll"><img src="images/scroll.png" alt=""></div>
+					</div>
+				  </div>
+				</section>
+
+				<section class="swiper-slide">
+				  <div class="swiper-slide page1">
+				  <div class="zhezhao"></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/1/P_one_00001.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/1/P_one_00002.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/1/P_one_00003.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/1/P_one_00004.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/1/P_one_00005.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/1/P_one_00006.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/1/P_one_00007.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/1/P_one_00008.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/1/P_one_00009.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/1/P_one_00010.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/1/P_one_00011.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/1/P_one_00012.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.6s" ><img src="images/1/P_one_00013.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.8s" ><img src="images/1/P_one_00014.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="3.0s" ><img src="images/1/P_one_00015.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="3.2s" ><img src="images/1/P_one_00016.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="3.4s" ><img src="images/1/P_one_00017.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="3.6s" ><img src="images/1/P_one_00018.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="3.8s" ><img src="images/1/P_one_00019.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="4.0s" ><img src="images/1/P_one_00020.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="4.2s" ><img src="images/1/P_one_00021.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="4.4s" ><img src="images/1/P_one_00022.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="4.6s" ><img src="images/1/P_one_00023.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="4.8s" ><img src="images/1/P_one_00024.jpg" alt=""></div>
+					<div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="5.0s" ><img src="images/1/P_one_00025.jpg" alt=""></div>
+				  </div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page2">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/2/P_two_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/2/P_two_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/2/P_two_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/2/P_two_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/2/P_two_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/2/P_two_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/2/P_two_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/2/P_two_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/2/P_two_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/2/P_two_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/2/P_two_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/2/P_two_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/2/P_two_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/2/P_two_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/2/P_two_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/2/P_two_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/2/P_two_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/2/P_two_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/2/P_two_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/2/P_two_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/2/P_two_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/2/P_two_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/2/P_two_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/2/P_two_00024.jpg" alt=""></div>
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page3">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/3/P_three_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/3/P_three_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/3/P_three_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/3/P_three_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/3/P_three_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/3/P_three_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/3/P_three_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/3/P_three_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/3/P_three_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/3/P_three_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/3/P_three_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/3/P_three_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/3/P_three_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/3/P_three_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/3/P_three_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/3/P_three_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/3/P_three_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/3/P_three_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/3/P_three_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/3/P_three_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/3/P_three_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/3/P_three_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/3/P_three_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/3/P_three_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/3/P_three_00025.jpg" alt=""></div>
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page4">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/4/P_four_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/4/P_four_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/4/P_four_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/4/P_four_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/4/P_four_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/4/P_four_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/4/P_four_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/4/P_four_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/4/P_four_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/4/P_four_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/4/P_four_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/4/P_four_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/4/P_four_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/4/P_four_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/4/P_four_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/4/P_four_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/4/P_four_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/4/P_four_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/4/P_four_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/4/P_four_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/4/P_four_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/4/P_four_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/4/P_four_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/4/P_four_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/4/P_four_00025.jpg" alt=""></div>
+          			</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page5">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/5/P_five_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/5/P_five_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/5/P_five_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/5/P_five_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/5/P_five_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/5/P_five_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/5/P_five_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/5/P_five_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/5/P_five_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/5/P_five_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/5/P_five_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/5/P_five_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/5/P_five_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/5/P_five_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/5/P_five_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/5/P_five_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/5/P_five_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/5/P_five_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/5/P_five_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/5/P_five_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/5/P_five_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/5/P_five_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/5/P_five_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/5/P_five_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/5/P_five_00025.jpg" alt=""></div>
+
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page6">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/6/P_six_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/6/P_six_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/6/P_six_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/6/P_six_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/6/P_six_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/6/P_six_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/6/P_six_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/6/P_six_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/6/P_six_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/6/P_six_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/6/P_six_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/6/P_six_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/6/P_six_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/6/P_six_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/6/P_six_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/6/P_six_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/6/P_six_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/6/P_six_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/6/P_six_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/6/P_six_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/6/P_six_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/6/P_six_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/6/P_six_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/6/P_six_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/6/P_six_00025.jpg" alt=""></div>
+
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page7">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/7/P_seven_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/7/P_seven_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/7/P_seven_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/7/P_seven_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/7/P_seven_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/7/P_seven_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/7/P_seven_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/7/P_seven_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/7/P_seven_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/7/P_seven_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/7/P_seven_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/7/P_seven_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/7/P_seven_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/7/P_seven_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/7/P_seven_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/7/P_seven_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/7/P_seven_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/7/P_seven_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/7/P_seven_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/7/P_seven_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/7/P_seven_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/7/P_seven_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/7/P_seven_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/7/P_seven_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/7/P_seven_00025.jpg" alt=""></div>
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page8">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/8/P_eight_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/8/P_eight_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/8/P_eight_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/8/P_eight_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/8/P_eight_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/8/P_eight_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/8/P_eight_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/8/P_eight_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/8/P_eight_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/8/P_eight_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/8/P_eight_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/8/P_eight_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/8/P_eight_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/8/P_eight_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/8/P_eight_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/8/P_eight_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/8/P_eight_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/8/P_eight_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/8/P_eight_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/8/P_eight_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/8/P_eight_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/8/P_eight_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/8/P_eight_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/8/P_eight_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/8/P_eight_00025.jpg" alt=""></div>
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page9">
+						<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/9/P_nine_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/9/P_nine_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/9/P_nine_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/9/P_nine_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/9/P_nine_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/9/P_nine_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/9/P_nine_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/9/P_nine_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/9/P_nine_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/9/P_nine_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/9/P_nine_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/9/P_nine_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/9/P_nine_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/9/P_nine_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/9/P_nine_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/9/P_nine_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/9/P_nine_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/9/P_nine_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/9/P_nine_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/9/P_nine_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/9/P_nine_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/9/P_nine_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/9/P_nine_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/9/P_nine_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/9/P_nine_00025.jpg" alt=""></div>
+
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page10">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/10/P_ten_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/10/P_ten_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/10/P_ten_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/10/P_ten_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/10/P_ten_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/10/P_ten_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/10/P_ten_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/10/P_ten_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/10/P_ten_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/10/P_ten_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/10/P_ten_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/10/P_ten_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/10/P_ten_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/10/P_ten_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/10/P_ten_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/10/P_ten_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/10/P_ten_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/10/P_ten_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/10/P_ten_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/10/P_ten_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/10/P_ten_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/10/P_ten_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/10/P_ten_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/10/P_ten_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/10/P_ten_00025.jpg" alt=""></div>
+					</div>
+				</section>
+
+				<section class="swiper-slide">
+					<div class="swiper-slide page11">
+					<div class="zhezhao"></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s" ><img src="images/11/P_eleven_00001.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s" ><img src="images/11/P_eleven_00002.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s" ><img src="images/11/P_eleven_00003.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.4s" ><img src="images/11/P_eleven_00004.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.5s" ><img src="images/11/P_eleven_00005.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.6s" ><img src="images/11/P_eleven_00006.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.7s" ><img src="images/11/P_eleven_00007.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s" ><img src="images/11/P_eleven_00008.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.9s" ><img src="images/11/P_eleven_00009.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.0s" ><img src="images/11/P_eleven_00010.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s" ><img src="images/11/P_eleven_00011.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s" ><img src="images/11/P_eleven_00012.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s" ><img src="images/11/P_eleven_00013.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s" ><img src="images/11/P_eleven_00014.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s" ><img src="images/11/P_eleven_00015.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s" ><img src="images/11/P_eleven_00016.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s" ><img src="images/11/P_eleven_00017.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s" ><img src="images/11/P_eleven_00018.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.9s" ><img src="images/11/P_eleven_00019.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.0s" ><img src="images/11/P_eleven_00020.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.1s" ><img src="images/11/P_eleven_00021.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.2s" ><img src="images/11/P_eleven_00022.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.3s" ><img src="images/11/P_eleven_00023.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.4s" ><img src="images/11/P_eleven_00024.jpg" alt=""></div>
+			          <div class="img-animate ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="2.5s" ><img src="images/11/P_eleven_00025.jpg" alt=""></div>
+
+					</div>
+				</section>
+				<section class="swiper-slide">
+				  <div class="swiper-slide pagebtm">
+				  	<img src="images/01.jpg" alt="" class="ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+				  	<div class="btn1 btn2 ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s"><a href="javascript:;">中大好声音投票进行中<br/>选出心中最佳金曲</a></div>
+				  	<div class="btn1 ani resize sharewechat" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s">           长按保存图片<br/>分享我的明信片到朋友圈</div>
+				  </div>
+				</section>    
+
+	  		</div>
+    	</div>
+	</div>
+</div>
+
+<script src="js/main.js"></script>
+		
+</body>
+</html>
